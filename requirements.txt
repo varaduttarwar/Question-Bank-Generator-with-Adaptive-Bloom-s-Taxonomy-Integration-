@@ -1,0 +1,13 @@
+streamlit
+langchain
+langchain_groq
+pymongo
+faiss-cpu
+sentence-transformers
+numpy
+pandas
+docx
+python-dotenv
+PyPDF2
+mysql-connector-python  
+
