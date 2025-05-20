@@ -13,6 +13,8 @@ Welcome to our intelligent academic tool built for COEP educators and students �
 - [📊 Test Coverage](#-test-coverage)
 - [🔮 Future Enhancements](#-future-enhancements)
 - [📚 References](#-references)
+- [📦 Run Locally](#-run-locally)
+- [📑 .env Configuration](#-env-configuration)
 
 ---
 
@@ -28,8 +30,8 @@ Traditional question paper creation is time-consuming, inconsistent, and lacks s
 
 ## 🎯 Key Features
 
-✅ AI-driven question generation (MCQs, short-answer,true/false)  
-✅ Bloom's Taxonomy level control 
+✅ AI-driven question generation (MCQs, Short-Answer, True/False)  
+✅ Bloom's Taxonomy level control  
 ✅ **3 Modes:**  
   - Generate Questions  
   - Take Quiz  
@@ -46,9 +48,9 @@ A robust **3-tier architecture** ensuring scalability and maintainability:
 
 - **Frontend:** Streamlit-based UI for educators and students  
 - **Backend:** Python + LangChain + Groq’s Llama-3 LLM  
-- **Database:** SQLite for storing questions along with answers  
+- **Database:** SQLite (or MySQL if configured) for storing questions and quiz results  
 
-**UML diagrams, DFDs, ER diagrams, and activity diagrams** available in report.
+**UML diagrams, DFDs, ER diagrams, and activity diagrams** available in the project report.
 
 ---
 
@@ -58,7 +60,7 @@ A robust **3-tier architecture** ensuring scalability and maintainability:
 |:-----------------|:----------------------------------|
 | 💻 Frontend       | Streamlit                          |
 | 🧠 AI/ML Backend  | LangChain + Groq’s Llama-3 (8b-8192)|
-| 🗃️ Database       | SQLite                              |     |
+| 🗃️ Database       | SQLite / MySQL                      |
 | 📖 Language       | Python 3.10+                        |
 
 ---
@@ -66,8 +68,8 @@ A robust **3-tier architecture** ensuring scalability and maintainability:
 ## 🚀 Core Functional Modes
 
 ### 📌 1️⃣ Generate Questions  
-- Input subject, syllabus, number, type (MCQ/Short/true or false)  
-- Auto-generates questions with Bloom’s Taxonomy labels  
+- Input subject, syllabus, number, type (MCQ/Short/True/False)  
+- Auto-generates questions tagged with Bloom’s Taxonomy levels  
 
 ### 📌 2️⃣ Take Quiz  
 - Choose topic, number of questions, type  
@@ -110,11 +112,24 @@ A robust **3-tier architecture** ensuring scalability and maintainability:
 - [Groq API Docs](https://groq.com/)
 - [IEEE SRS Standards](https://ieeexplore.ieee.org/document/1115056)
 - [Bloom’s Taxonomy Reference (1956)](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/)
+
 ---
 
 ## 📦 Run Locally
 
+**⚙️ Prerequisites:**
+- Python 3.10+
+- Virtual Environment (Recommended)
+- `.env` file for API keys and DB credentials
+
+### 🐍 Create and Activate a Virtual Environment
+
 ```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+
+bash
 git clone https://github.com/varaduttarwar/question-bank-generator.git
 cd question-bank-generator
 pip install -r requirements.txt
